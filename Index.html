@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Beauty Bar</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+body{
+margin:0;
+font-family:Montserrat,sans-serif;
+background:linear-gradient(#0f0f0f,#050505);
+color:white;
+text-align:center;
+}
+
+
+/* Header */
+
+
+header{
+padding:120px 20px;
+background:radial-gradient(circle,#1c1c1c,#000);
+}
+
+
+header h1{
+font-family:"Playfair Display",serif;
+font-size:60px;
+color:#d4af37;
+}
+
+
+/* Buttons */
+
+
+.button{
+padding:14px 35px;
+margin:10px;
+background:#d4af37;
+color:black;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+}
+
+
+/* Language buttons */
+
+
+.lang-btn{
+padding:8px 18px;
+margin:8px;
+border-radius:20px;
+border:1px solid #d4af37;
+background:none;
+color:#d4af37;
+cursor:pointer;
+}
+
+
+/* Gallery */
+
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:40px;
+}
+
+
+.gallery img{
+width:100%;
+border-radius:20px;
+transition:0.4s;
+}
+
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<h1 id="title">Andrea Beauty Bar</h1>
+<p id="subtitle">Luxury Make up & Nail Studio | Trebinje</p>
+
+
+<button class="lang-btn" onclick="setLanguage('sr')">🇷🇸 Srpski</button>
+<button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+
+
+</header>
+
+
+<section>
+
+
+<h2 id="aboutTitle">O nama</h2>
+
+
+<p id="aboutText">
+Andrea Beauty Bar je premium beauty studio.<br>
+Radimo profesionalni make up i manikir.
+</p>
+
+
+</section>
+
+
+<section>
+
+
+<h2>Galerija</h2>
+
+
+<div class="gallery">
+
+
+<img src="https://via.placeholder.com/500x400?text=Nails+1">
+<img src="https://via.placeholder.com/500x400?text=Nails+2">
+<img src="https://via.placeholder.com/500x400?text=Makeup+1">
+<img src="https://via.placeholder.com/500x400?text=Makeup+2">
+<img src="https://via.placeholder.com/500x400?text=Beauty+Nails">
+<img src="https://via.placeholder.com/500x400?text=Luxury+Makeup">
+
+
+</div>
+
+
+</section>
+
+
+<section>
+
+
+<h2>Kontakt</h2>
+
+
+<p>📍 Trebinje</p>
+<p>📱 +387 65 390 212</p>
+
+
+<a class="button" href="tel:+38765390212">Pozovi</a>
+<a class="button" href="https://wa.me/38765390212">WhatsApp</a>
+<a class="button" href="https://instagram.com/andrea_beautybar" target="_blank">Instagram</a>
+
+
+</section>
+
+
+<script>
+
+
+const translations={
+sr:{
+title:"Andrea Beauty Bar",
+subtitle:"Luxury Make up & Nail Studio | Trebinje",
+aboutTitle:"O nama",
+aboutText:"Andrea Beauty Bar je premium beauty studio.<br>Radimo profesionalni make up i manikir."
+},
+
+
+en:{
+title:"Andrea Beauty Bar",
+subtitle:"Luxury Beauty Studio | Trebinje",
+aboutTitle:"About us",
+aboutText:"Andrea Beauty Bar is a premium beauty studio.<br>Professional makeup and nail services."
+}
+};
+
+
+function setLanguage(lang){
+
+
+document.getElementById("title").innerHTML=translations[lang].title;
+document.getElementById("subtitle").innerHTML=translations[lang].subtitle;
+document.getElementById("aboutTitle").innerHTML=translations[lang].aboutTitle;
+document.getElementById("aboutText").innerHTML=translations[lang].aboutText;
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
