@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Beauty Bar</title>
+
+
+<style>
+
+
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background:black;
+color:white;
+text-align:center;
+}
+
+
+header{
+padding:120px 20px;
+background:linear-gradient(#111,#000);
+}
+
+
+h1{
+color:#d4af37;
+font-size:60px;
+}
+
+
+.button{
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+background:#d4af37;
+color:black;
+border-radius:30px;
+text-decoration:none;
+}
+
+
+.gallery img{
+width:300px;
+margin:10px;
+border-radius:20px;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+<h1>Andrea Beauty Bar</h1>
+<p>Luxury Make up & Nail Studio | Trebinje</p>
+
+
+<br>
+
+
+<button class="button" onclick="setLanguage('sr')">🇷🇸 Srpski</button>
+<button class="button" onclick="setLanguage('en')">🇬🇧 English</button>
+
+
+</header>
+
+
+<section>
+<h2 id="aboutTitle">O nama</h2>
+
+
+<p id="aboutText">
+Andrea Beauty Bar je premium beauty studio.<br>
+Makeup i manikir usluge.
+</p>
+</section>
+
+
+<section class="gallery">
+
+
+<img src="https://via.placeholder.com/400x300">
+<img src="https://via.placeholder.com/400x300">
+<img src="https://via.placeholder.com/400x300">
+
+
+</section>
+
+
+<section>
+<h2>Kontakt</h2>
+
+
+<a class="button" href="https://instagram.com/andrea_beautybar" target="_blank">
+Instagram
+</a>
+
+
+</section>
+
+
+<script>
+
+
+const translations={
+sr:{
+aboutTitle:"O nama",
+aboutText:"Andrea Beauty Bar je premium beauty studio.<br>Makeup i manikir usluge."
+},
+en:{
+aboutTitle:"About us",
+aboutText:"Andrea Beauty Bar is a premium beauty studio.<br>Makeup and nail services."
+}
+};
+
+
+function setLanguage(lang){
+document.getElementById("aboutTitle").innerHTML=translations[lang].aboutTitle;
+document.getElementById("aboutText").innerHTML=translations[lang].aboutText;
+}
+
+
+</script>
+
+
+</body>
+</html>
